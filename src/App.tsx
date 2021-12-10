@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-// import { SideBar } from './components/SideBar';
+import { SideBar } from './components/SideBar';
 import { Content } from "./components/Content";
 import { api } from "./services/api";
 import { GenreResponse, Movie } from "./model/movies";
@@ -29,6 +29,7 @@ export function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
+      <SideBar onTransactionMovie={handleClickButton} selectedGenreId={selectedGenreId} />
       <Content movies={movies} selectedGenre={selectedGenre} />
     </div>
   );
