@@ -25,8 +25,8 @@ export function Content({ movies, selectedGenre }: ContentProps) {
               key={movie.imdbID}
               title={movie.Title}
               poster={movie.Poster}
-              rating={movie.Ratings[0].Value}
               runtime={movie.Runtime}
+              rating={movie.Ratings[0].Value}
             />
           ))}
         </div>
